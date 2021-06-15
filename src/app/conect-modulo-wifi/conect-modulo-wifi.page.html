@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" [routerLink]="['/tabs/tab1']">
+        <ion-icon slot="icon-only" name="arrow-back">Back</ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Gráficas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-card-title class="ion-text-center">Gráfica Presión Arterial</ion-card-title>
+<chart [type]="type" [data]="data" [options]="options"></chart>
+<ion-card-title class="ion-text-center">Gráfica Glucosa</ion-card-title>
+<chart [type]="type_2" [data]="data_2" [options]="options_2"></chart>

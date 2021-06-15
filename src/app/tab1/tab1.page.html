@@ -1,17 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Inicio
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <img src="/assets/salud.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>{{date_now_inicio}}</ion-card-subtitle>
+      <ion-card-title>Bienvenido</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Esta aplicación esta basada en el trabajo terminal "Prototipo de un sistema no invasivo parala ayuda en el control de la diabtes y la 
+      presión arterial". Enfocada en la Medición de las dos enfermedades más populares en México; La diabetes y la Presión arterial.<br>
+    </ion-card-content>
+  </ion-card>
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>

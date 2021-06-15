@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 
+
 describe('AppComponent', () => {
 
   let statusBarSpy;
@@ -35,7 +36,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
+   });
 
   it('should initialize the app', async () => {
     TestBed.createComponent(AppComponent);

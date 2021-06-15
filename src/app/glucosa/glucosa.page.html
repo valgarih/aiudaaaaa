@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" [routerLink]="['/tabs/tab1']">
+        <ion-icon slot="icon-only" name="arrow-back">Back</ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Medición de Glucosa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form id="form">
+    <ion-item>
+      <ion-label>Fecha:  {{date_now}}</ion-label>
+      <ion-icon name="calendar" slot="end"></ion-icon>
+    </ion-item><br><br>
+    <p>Seleccione comenzar para empezar la Medición</p>
+    <ion-list style="text-align:center; background-color:transparent;">
+      <ion-button color="secondary" id="btn_comenzar" (click)="medicionGlucosa()">Comenzar</ion-button><br>
+         
+    </ion-list>
+    <ion-item style="text-align:center">
+      <ion-label id="medicion_glucosa"> {{data_glucosa}} mg/dL</ion-label>
+    </ion-item><br> 
+    
+      <p>¿Como se siente?*</p>
+      <ion-list style="text-align:center;background-color:transparent;">
+        <ion-button ion-button icon-only  [color]="buttonValue > 2 ? 'danger' : 'secondary'" (click)="buttonValue = 3">
+        
+          <ion-icon name="sad"></ion-icon>
+        </ion-button>
+        <ion-button ion-button icon-only  [color]="buttonValue < 0 ? 'success' : 'secondary'" (click)="buttonValue = -1">
+          <ion-icon name="happy"></ion-icon>
+        </ion-button>        
+      </ion-list>
+
+      <p>¿Desea agregar un comentario?</p>
+      <ion-footer padding class="myColor">
+        <ion-textarea id="myTextArea" type="text" placeholder="Comment .... "></ion-textarea>
+      </ion-footer>
+    <ion-button expand="block" shape="round" (click)="guardarGlucosa()">Guardar</ion-button>
+  </form>
+</ion-content>

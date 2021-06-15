@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" [routerLink]="['/tabs/tab1']">
+        <ion-icon slot="icon-only" name="arrow-back">Back</ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Contactanos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form id="form">
+    <p>Siguenos en cualquiera de nuestras redes sociales</p><br>
+    <!-- <ion-fab vertical="center" horizontal="end" slot="fixed"> -->
+    <ion-fab horizontal="end" horizontal="center" slot="fixed">
+      <ion-fab-button onclick="window.open('https://www.facebook.com/VitaliApp1-103668458621438', '_system', 'location=yes'); return false;" color="primary">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <ion-fab horizontal="end" horizontal="end" slot="fixed">
+      <ion-fab-button color="danger">
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <ion-fab horizontal="end" horizontal="top" slot="fixed">
+      <ion-fab-button onclick="window.open('https://www.instagram.com/vitaliapp4/', '_system', 'location=yes'); return false;" color= "dark" class="h">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+    </ion-fab><br><br><br><br><br>
+
+    <p>Escribamos para cualquier duda o comentario</p>
+    <ion-item>
+      <ion-input [(ngModel)]="Email" name="Email" placeholder="Email"></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-input [(ngModel)]="Subject" name="Subject" placeholder="Subject"></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-textarea  [(ngModel)]="mensaje" name="mensaje" placeholder="Your message ...."></ion-textarea>
+    </ion-item><br><br>
+    <ion-button (click)="send()"  expand="block" shape="round">Enviar</ion-button>
+  </form>
+</ion-content>
